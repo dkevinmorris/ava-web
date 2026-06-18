@@ -4,295 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Antioch Value Assurance</title>
-  <style>
-    :root {
-      --navy: #071b33;
-      --navy-light: #0d2f55;
-      --charcoal: #20242a;
-      --gold: #c99a2e;
-      --blue: #0b76d1;
-      --white: #ffffff;
-      --muted: #c8d2df;
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--navy);
-      color: var(--white);
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 28px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(7, 27, 51, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    .hero {
-      min-height: 88vh;
-      padding: 110px 8%;
-      background:
-        linear-gradient(rgba(7, 27, 51, 0.92), rgba(7, 27, 51, 0.96)),
-        radial-gradient(circle at top right, var(--navy-light), var(--navy));
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 0.85rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      line-height: 1.05;
-      margin-bottom: 24px;
-    }
-
-    h1 span {
-      color: var(--gold);
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 1.2rem;
-      max-width: 680px;
-      margin-bottom: 34px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 26px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--gold);
-      color: var(--white);
-    }
-
-    .hero-card {
-      background: linear-gradient(145deg, #0d2f55, #061527);
-      border: 1px solid rgba(201, 154, 46, 0.35);
-      padding: 38px;
-      border-radius: 18px;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.35);
-    }
-
-    .hero-card h3 {
-      color: var(--gold);
-      margin-bottom: 18px;
-      font-size: 1.4rem;
-    }
-
-    .hero-card ul {
-      list-style: none;
-    }
-
-    .hero-card li {
-      margin-bottom: 14px;
-      color: var(--muted);
-    }
-
-    .section {
-      padding: 90px 8%;
-    }
-
-    .section.alt {
-      background: #0a223d;
-    }
-
-    .section-title {
-      max-width: 850px;
-      margin-bottom: 52px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      margin-bottom: 18px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 24px;
-    }
-
-    .service-card {
-      background: #071b33;
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 28px;
-      border-radius: 14px;
-      transition: 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--gold);
-    }
-
-    .service-card h3 {
-      color: var(--gold);
-      margin-bottom: 14px;
-      font-size: 1.15rem;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .panel {
-      background: linear-gradient(145deg, #0d2f55, #061527);
-      padding: 42px;
-      border-radius: 18px;
-      border: 1px solid rgba(201,154,46,0.25);
-    }
-
-    .panel h3 {
-      color: var(--gold);
-      margin-bottom: 16px;
-      font-size: 1.6rem;
-    }
-
-    .panel p, .panel li {
-      color: var(--muted);
-    }
-
-    .panel ul {
-      margin-left: 20px;
-      margin-top: 18px;
-    }
-
-    .cta {
-      text-align: center;
-      background: linear-gradient(135deg, #061527, #0d2f55);
-      padding: 90px 8%;
-    }
-
-    .cta h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      max-width: 760px;
-      margin: 0 auto 32px;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      padding: 40px 8%;
-      background: #050f1d;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 1100px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero,
-      .two-column {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
-      }
-
-      nav a {
-        margin: 0 18px 0 0;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 70px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
 <header>
-  <div class="logo">AVA <span>| Antioch Value Assurance</span></div>
+<a href="/" class="logo">
+        <img src="images/ava-logo.png" alt="Antioch Value Assurance">
+    </a>
   <nav>
     <a href="#services">Services</a>
     <a href="#approach">Approach</a>
@@ -302,81 +23,209 @@
 </header>
 
 <section class="hero">
+
   <div>
-    <div class="eyebrow">M&A Advisory | Value Realization</div>
-    <h1>Execution Is the Difference. <span>Value Is the Result.</span></h1>
+    <div class="eyebrow">
+      M&A Advisory | Value Realization
+    </div>
+
+    <h1>
+      Execution Is the Difference.
+      <span>Value Is the Result.</span>
+    </h1>
+
     <p>
-      Antioch Value Assurance helps executives, private equity firms, and enterprise leaders protect deal value through disciplined M&A execution, integration governance, TSA exit acceleration, technology readiness, and continuous value assurance.
+      Antioch Value Assurance helps executives, private equity firms,
+      and enterprise leaders protect deal value through disciplined
+      M&A execution, integration governance, TSA exit acceleration,
+      technology readiness, and continuous value assurance.
     </p>
+
     <div class="buttons">
-      <a href="#services" class="btn btn-primary">Explore Services</a>
-      <a href="#contact" class="btn btn-secondary">Schedule a Conversation</a>
+      <a href="#services" class="btn btn-primary">
+        Explore Services
+      </a>
+
+      <a href="#contact" class="btn btn-secondary">
+        Schedule a Conversation
+      </a>
     </div>
   </div>
 
   <div class="hero-card">
     <h3>Where Strategy Becomes Realized Value</h3>
+
     <ul>
-      <li>? M&A execution diagnostics</li>
-      <li>? Day-1 and 100-day readiness</li>
-      <li>? IMO and SMO leadership</li>
-      <li>? TSA exit acceleration</li>
-      <li>? IT readiness and transformation execution</li>
-      <li>? Value assurance reviews</li>
+      <li>- M&A execution diagnostics</li>
+      <li>- Day-1 and 100-day readiness</li>
+      <li>- IMO and SMO leadership</li>
+      <li>- TSA exit acceleration</li>
+      <li>- IT readiness and transformation execution</li>
+      <li>- Value assurance reviews</li>
     </ul>
   </div>
+
 </section>
 
+  <div class="hero-brand">
+      <img src="images/ava-logo.png" alt="AVA">
+  </div>
+
+
+ 
 <section class="section" id="services">
+
   <div class="section-title">
-    <h2>Branded Advisory Services</h2>
+    <h2>The AVA Ecosystem</h2>
     <p>
-      AVA services are designed to identify execution risk, accelerate transformation, and ensure that promised value becomes realized enterprise value.
+      AVA provides integrated advisory, execution, technology, assurance, and exit readiness services designed to help organizations realize enterprise value through disciplined execution.
+    </p>
+  </div>
+
+<div class="assure-layer">
+  <div class="assure-icon">✓</div>
+
+  <div>
+    <h3>AVA Assure™</h3>
+    <h4>Value Assurance & Benefits Realization</h4>
+  </div>
+
+  <p>
+    Independent assurance that spans across every engagement to identify risk,
+    validate benefits, and protect enterprise value.
+  </p>
+</div>
+
+
+
+  <div class="services-grid-four">
+
+  <div class="service-card">
+    <div class="service-icon">👥</div>
+    <h3>AVA Lead™</h3>
+    <h4>Align</h4>
+    <p>Align leaders, governance, and decision-making to accelerate transformation success.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">⚙</div>
+    <h3>AVA Execute™</h3>
+    <h4>Deliver</h4>
+    <p>Transform strategic initiatives into measurable business outcomes through disciplined execution.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">💻</div>
+    <h3>AVA Tech™</h3>
+    <h4>Enable</h4>
+    <p>Ensure technology enables business objectives through integration and modernization.</p>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">↗</div>
+    <h3>AVA Exit™</h3>
+    <h4>Monetize</h4>
+    <p>Prepare organizations for successful separation, TSA exit, and value monetization.</p>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- 
+
+<section class="section" id="services">
+
+  <div class="section-title">
+    <h2>AVA Services</h2>
+
+    <p>
+      AVA enables organizations to transform strategic intent 
+      into measurable business outcomes through leadership, 
+      execution, technology, assurance, and exit readiness.
     </p>
   </div>
 
   <div class="grid">
+
     <div class="service-card">
-      <h3>AVA Execute�</h3>
-      <p>M&A execution diagnostics that assess readiness, governance, risks, and value leakage before execution failure becomes visible.</p>
+      <h3>AVA Execute™</h3>
+
+      <p>
+        M&A execution diagnostics that assess readiness,
+        governance, risks, and value leakage before
+        execution failure becomes visible.
+      </p>
     </div>
 
     <div class="service-card">
-      <h3>AVA Exit�</h3>
-      <p>TSA exit acceleration services focused on reducing dependency, cost, complexity, and operational risk after close.</p>
+      <h3>AVA Exit™</h3>
+
+      <p>
+        TSA exit acceleration services focused on reducing
+        dependency, cost, complexity, and operational risk.
+      </p>
     </div>
 
     <div class="service-card">
-      <h3>AVA Lead�</h3>
-      <p>IMO-as-a-Service leadership for integrations, separations, transformation programs, and enterprise execution governance.</p>
+      <h3>AVA Lead™</h3>
+
+      <p>
+        IMO-as-a-Service leadership for integrations,
+        separations, transformation programs,
+        and enterprise execution governance.
+      </p>
     </div>
 
     <div class="service-card">
-      <h3>AVA Tech�</h3>
-      <p>Technology readiness and execution support across ERP, cybersecurity, infrastructure, applications, data, and operational continuity.</p>
+      <h3>AVA Tech™</h3>
+
+      <p>
+        Technology readiness and execution support
+        across ERP, cybersecurity, infrastructure,
+        applications, data, and operational continuity.
+      </p>
     </div>
 
     <div class="service-card">
-      <h3>AVA Assure�</h3>
-      <p>Value assurance reviews that track benefits realization, KPI governance, synergy execution, and value leakage indicators.</p>
+      <h3>AVA Assure™</h3>
+
+      <p>
+        Value assurance reviews that track benefits realization,
+        KPI governance, synergy execution,
+        and value leakage indicators.
+      </p>
     </div>
+
   </div>
+
 </section>
+-->
+
 
 <section class="section alt" id="approach">
+
   <div class="two-column">
+
     <div class="section-title">
       <h2>Built for Complex, High-Stakes Execution</h2>
+
       <p>
-        Deals fail less often because the strategy was wrong and more often because execution was fragmented, delayed, under-governed, or disconnected from value realization.
+        Deals fail less often because the strategy was wrong
+        and more often because execution was fragmented,
+        delayed, under-governed, or disconnected from value realization.
       </p>
     </div>
 
     <div class="panel">
       <h3>The AVA Difference</h3>
+
       <p>
-        Antioch Value Assurance brings an execution-first operating model to the full deal lifecycle.
+        Antioch Value Assurance brings an execution-first
+        operating model to the full deal lifecycle.
       </p>
+
       <ul>
         <li>Opportunity framing through benefits realization</li>
         <li>Integration and separation governance</li>
@@ -385,38 +234,134 @@
         <li>Practical leadership for complex enterprise environments</li>
       </ul>
     </div>
+
   </div>
+
 </section>
 
+<section class="section thought-leadership" id="insights">
+
+  <div class="section-title centered">
+    <h2>Insights & Thought Leadership</h2>
+    <p>
+      AVA extends beyond advisory services through books, podcasts, and white papers designed to help leaders understand, execute, and realize enterprise value.
+    </p>
+  </div>
+
+  <div class="insights-grid">
+
+    <div class="insight-card">
+      <div class="insight-label">Book Series</div>
+      <h3>Value Realized</h3>
+      <p>
+        The AVA book series explores the disciplines of execution, integration, technology, assurance, leadership, and exit readiness required to transform strategic intent into measurable enterprise value.
+      </p>
+      <ul>
+        <li>Value Realized</li>
+        <li>AVA Execute</li>
+        <li>AVA Lead</li>
+        <li>AVA Tech</li>
+        <li>AVA Assure</li>
+        <li>AVA Exit</li>
+      </ul>
+    </div>
+
+    <div class="insight-card featured">
+      <div class="insight-label">Podcast</div>
+      <h3>Value Realized Podcast</h3>
+      <p>
+        Hosted by Kevin Morris, the Value Realized Podcast examines M&A execution, TSA exits, integration governance, technology risk, value assurance, and the leadership discipline required to deliver enterprise value.
+      </p>
+      <ul>
+        <li>M&A execution lessons</li>
+        <li>Integration and separation leadership</li>
+        <li>Technology and transformation risk</li>
+        <li>Benefits realization and value assurance</li>
+      </ul>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-label">White Papers</div>
+      <h3>AVA Research & Frameworks</h3>
+      <p>
+        AVA white papers provide practical frameworks, executive perspectives, and implementation guidance for organizations facing complex acquisitions, separations, transformations, and value realization challenges.
+      </p>
+      <ul>
+        <li>AVA Assure Framework</li>
+        <li>Benefits Realization Reviews</li>
+        <li>Execution Risk Diagnostics</li>
+        <li>Enterprise Value Realization</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- 
 <section class="section" id="insights">
+
   <div class="two-column">
+
     <div class="panel">
       <h3>Value Realized Book</h3>
+
       <p>
-        <strong>Value Realized</strong> explores why most M&A deals fail in execution � and how leaders can deliver enterprise value through disciplined integration, transformation, and value assurance.
+        <strong>Value Realized</strong> explores why most M&A
+        deals fail in execution � and how leaders can deliver
+        enterprise value through disciplined integration,
+        transformation, and value assurance.
       </p>
     </div>
 
     <div class="panel">
       <h3>Value Assured Podcast</h3>
+
       <p>
-        The <strong>Value Assured Podcast</strong>, hosted by Kevin Morris, examines M&A execution, TSA exits, integration governance, technology risk, and the leadership discipline required to turn strategy into realized value.
+        The <strong>Value Assured Podcast</strong>,
+        hosted by Kevin Morris, examines M&A execution,
+        TSA exits, integration governance, technology risk,
+        and leadership discipline required to turn strategy
+        into realized value.
       </p>
     </div>
+
   </div>
+
 </section>
 
+-->
+
 <section class="cta" id="contact">
+
   <h2>Protect the Value You Acquired.</h2>
+
   <p>
-    Whether you are preparing for close, stabilizing Day-1, exiting TSAs, integrating technology, or tracking synergy realization, Antioch Value Assurance helps ensure execution stays connected to enterprise value.
+    Whether you are preparing for close, stabilizing Day-1,
+    exiting TSAs, integrating technology, or tracking
+    synergy realization, Antioch Value Assurance helps
+    ensure execution stays connected to enterprise value.
   </p>
-  <a href="mailto:dkevinmorris@comcast.net" class="btn btn-primary">Contact Kevin Morris</a>
+
+  <a href="mailto:dkevinmorris@comcast.net" class="btn btn-primary">
+    Contact Kevin Morris
+  </a>
+
 </section>
 
 <footer>
-  <div>� 2026 Antioch Value Assurance. All rights reserved.</div>
-  <div>AVA Execute� | AVA Exit� | AVA Lead� | AVA Tech� | AVA Assure�</div>
+
+  <div class="footer-logo">
+      <img src="images/ava-logo.png" alt="AVA Logo">
+  </div>
+
+  <div>
+    � 2026 Antioch Value Assurance. All rights reserved.
+  </div>
+
+<div>
+  AVA Assure™ | AVA Lead™ | AVA Execute™ | AVA Tech™ | AVA Exit™
+</div>
 </footer>
 
 </body>
