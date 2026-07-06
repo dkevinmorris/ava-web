@@ -470,4 +470,59 @@ blockquote cite {
     position: static;
     margin-top: 20px;
   }
+
+  .resources-page {
+  padding: 70px 60px;
+  background: #f5f7fa;
+}
+
+.resources-page h1 {
+  font-size: 46px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.resources-page p {
+  font-size: 18px;
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.resource-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+}
+
+.resource-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.resource-card p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.resource-card a {
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 800;
+  color: #071b33;
+}
+
+@media (max-width: 900px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 }

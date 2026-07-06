@@ -1,0 +1,297 @@
+:root {
+  --navy: #0b1f3a;
+  --charcoal: #2f343a;
+  --gold: #c9a24a;
+  --light: #f6f7f9;
+  --white: #ffffff;
+  --text: #1f2933;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--navy);
+  padding: 18px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--gold);
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(11, 31, 58, 0.9), rgba(11, 31, 58, 0.9)),
+    url("images/speaking-hero.jpg") center/cover no-repeat;
+  color: var(--white);
+  padding: 120px 0;
+}
+
+.hero-content {
+  max-width: 820px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 28px;
+}
+
+.intro {
+  padding: 75px 0 45px;
+  text-align: center;
+}
+
+.intro h2,
+.topics-section h2,
+.formats h2,
+.takeaways h2 {
+  color: var(--navy);
+  font-size: 2.3rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.intro p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+.topics-section {
+  background: var(--light);
+  padding: 80px 0 95px;
+}
+
+.topics-grid {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.topic-card {
+  background: var(--white);
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(11, 31, 58, 0.08);
+  border: 1px solid rgba(11, 31, 58, 0.08);
+}
+
+.topic-card.featured {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.topic-card.featured h3 {
+  color: var(--white);
+}
+
+.topic-number {
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.topic-card h3 {
+  color: var(--navy);
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+}
+
+.formats {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.formats-grid {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.formats-grid div {
+  background: var(--light);
+  padding: 30px;
+  border-radius: 18px;
+  border-top: 5px solid var(--gold);
+}
+
+.formats-grid span {
+  display: block;
+  color: var(--navy);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.audience {
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 90px 0;
+}
+
+.audience-box {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 46px;
+  border-radius: 20px;
+}
+
+.audience h2 {
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+}
+
+.audience p {
+  max-width: 820px;
+}
+
+.takeaways {
+  padding: 90px 0;
+}
+
+.takeaway-list {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.takeaway-list div {
+  background: var(--light);
+  padding: 28px;
+  border-radius: 16px;
+}
+
+.takeaway-list span {
+  display: block;
+  color: var(--gold);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.cta {
+  background: var(--navy);
+  color: var(--white);
+  padding: 85px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.cta p {
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 13px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background: #d8b75f;
+}
+
+.site-footer {
+  background: #20252b;
+  color: var(--white);
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1000px) {
+  .topics-grid,
+  .formats-grid,
+  .takeaway-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px;
+  }
+
+  .topics-grid,
+  .formats-grid,
+  .takeaway-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 85px 0;
+  }
+}
