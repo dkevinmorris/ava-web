@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Antioch Value Assurance</title>
+<title>Antioch Value Assurance | Enterprise Value Realization</title>
+
+<meta
+  name="description"
+  content="Antioch Value Assurance advances enterprise value realization through execution frameworks, continuous value assurance, research, education, and AI-powered intelligence."
+>
+
+<link rel="canonical" href="https://www.antiochvalueassurance.com/">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -48,8 +55,8 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#" class="primary-btn">Read Value Realized</a>
-          <a href="#" class="secondary-btn">Explore the AVA System</a>
+          <a href="value-realized.html" class="primary-btn">Read Value Realized</a>
+          <a href="frameworks.html" class="secondary-btn">Explore the AVA System</a>
         </div>
       </div>
 
@@ -90,23 +97,23 @@
         </a>
 
         <a href="podcast.html" class="quick-link-item">
-          <img src="images/podcast.png" alt="Resources">
+          <img src="images/podcast.png" alt="Podcast Icon">
           <div>
             <strong>Listen to the Podcast</strong>
-            <small>Execution Insites</small>
+            <small>Execution Insights</small>
           </div>
         </a>
 
         <a href="frameworks.html" class="quick-link-item">
-          <img src="images/frameworks-icon.png" alt="Resources">
+          <img src="images/frameworks-icon.png" alt="Frameworks Icon">
           <div>
-            <strong>Explore our Fameworks</strong>
+            <strong>Explore Our Fameworks</strong>
             <small>Proven Models</small>
           </div>
         </a>
 
         <a href="services.html" class="quick-link-item">
-          <img src="images/services.png" alt="Resources">
+          <img src="images/services.png" alt="Services Icon">
           <div>
             <strong>View Our Services</strong>
             <small>Advisory Solutions</small>
@@ -114,7 +121,7 @@
         </a>
 
         <a href="speaking.html" class="quick-link-item">
-          <img src="images/speaking-icon.png" alt="Resources">
+          <img src="images/speaking-icon.png" alt="Speaking Icon">
           <div>
             <strong>Invite Kevin to Speak</strong>
             <small>Conferences & Events</small>
@@ -123,7 +130,7 @@
 
 
         <a href="contact.html" class="quick-link-item">
-          <img src="images/call.png" alt="Resources">
+          <img src="images/call.png" alt="Executive Call Icon">
           <div>
             <strong>Schedule an Executive Call</strong>
             <small>Let's Start a Conversation</small>
@@ -187,8 +194,20 @@
     <section class="newsletter">
       <h3>Value Realized Weekly</h3>
       <p>Execution insights, frameworks, and leadership lessons delivered weekly.</p>
-      <form>
-        <input type="email" placeholder="Enter your email">
+      <form action="/subscribe" method="post">
+        <label class="sr-only" for="newsletter-email">
+          Email address
+        </label>
+
+        <input
+          id="newsletter-email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+          autocomplete="email"
+          required
+        >
+
         <button type="submit">Subscribe</button>
       </form>
     </section>
@@ -200,7 +219,7 @@
         <div>
           <h4>AI and the Future of M&A Execution</h4>
           <p>How AI is reshaping due diligence, integration, and value realization.</p>
-          <a href="#">Listen Now →</a>
+          <a href="podcast.html">Listen Now →</a>
         </div>
       </div>
     </section>
@@ -213,7 +232,7 @@
         <li><a href="#">Integration Planning Checklist</a></li>
         <li><a href="#">AI-Enabled Execution Advantage</a></li>
       </ul>
-      <a href="#">View All Resources →</a>
+      <a href="resources.html">View All Resources →</a>
     </section>
 
   </aside>
@@ -221,4 +240,29 @@
 </main>
 
 </body>
+
+<!--
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img src="images/ava-logo.PNG" alt="Antioch Value Assurance">
+      <p>Advancing the discipline of Enterprise Value Realization.</p>
+    </div>
+
+    <nav aria-label="Footer navigation">
+      <a href="start-here.html">Start Here</a>
+      <a href="frameworks.html">Frameworks</a>
+      <a href="resources.html">Resources</a>
+      <a href="books.html">Books</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <p class="copyright">
+    © 2026 Antioch Value Assurance. All rights reserved.
+  </p>
+</footer>
+-->
+
 </html>
