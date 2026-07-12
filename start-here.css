@@ -111,13 +111,16 @@ color:#f26a1b;
 
 .hero{
 
-background:linear-gradient(135deg,#07172d,#0b2341);
+background:linear-gradient(rgba(13,35,64,.92),rgba(13,35,64,.92)),
+url(images/start-here-hero.png);
 
+background-size:cover;
+background-position:center;
+
+padding:130px 0;
+text-align:center;
 color:white;
 
-padding:120px 20px;
-
-text-align:center;
 
 }
 
