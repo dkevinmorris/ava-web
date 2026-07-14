@@ -7,6 +7,12 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+<link
+  rel="preload"
+  as="image"
+  href="images/hero-mountain.webp"
+  fetchpriority="high"
+>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,7 +77,13 @@
     <img
         src="images/ava-enterprise-value-realization-system.png"
         alt="AVA Enterprise Value Realization System"
-        class="hero-system-diagram">
+        class="hero-system-diagram"
+        width="900"
+        height="650"
+        fetchpriority="hight"
+        decoding="async"
+      >
+        
 </div>
     </section>
 
@@ -149,7 +161,14 @@
 
     <section class="feature-grid">
       <article class="feature-card">
-        <img src="images/AI.png" alt="">
+        <img 
+          src="images/AI.png" 
+          alt="Artificial intelligence supporting enterprise value realization"
+          width="500"
+          height="330"
+          loading="lazy"
+          decoding="async" 
+        >
         <h3>AVA Intelligence</h3>
         <p>AI-powered insights that continuously evaluate execution health, identify risk, and detect value leakage.</p>
         <a href="#">Learn More →</a>

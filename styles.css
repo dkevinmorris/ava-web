@@ -160,7 +160,7 @@ nav a:focus-visible {
   min-height: 760px;
   background:
     linear-gradient(90deg, rgba(7,27,51,.95), rgba(7,27,51,.45)),
-    url("images/hero-mountain.png") center/cover;
+    url("images/hero-mountain.png") center/cover no-repeat;
   color: var(--white);
   display: grid;
   grid-template-columns:40% 60%;
